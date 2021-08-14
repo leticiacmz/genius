@@ -12,6 +12,9 @@ const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 
+const nivel = document.getElementById('nivel');
+const pontos = document.getElementById('pontos');
+
 //cria ordem aletoria de cores
 let shuffleOrder = () => {
     let colorOrder = Math.floor(Math.random() * 4);
@@ -35,7 +38,7 @@ let lightColor = (element, number) => {
     }, number);
 }
 
-//checa se os botoes clicados são os mesmos da ordem gerada no jogo
+//verifica se os botoes clicados são os mesmos mostrados anteriormente
 let checkOrder = () => {
     for(let i in clickedOrder) {
         if(clickedOrder[i] != order[i]) {
@@ -44,12 +47,12 @@ let checkOrder = () => {
         }
     }
     if(clickedOrder.length == order.length) {
-        alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
+        alert(`Pontuação: ${score}\nVocê acertou! Próximo nível!`);
         nextLevel();
     }
 }
 
-//funcao para o clique do usuario
+//funçãp verificar o click do usuario
 let click = (color) => {
     clickedOrder[clickedOrder.length] = color;
     createColorElement(color).classList.add('selected');
@@ -60,7 +63,7 @@ let click = (color) => {
     },250);
 }
 
-//funcao que retorna a cor
+//função que retorna a cor
 let createColorElement = (color) => {
     if(color == 0) {
         return green;
@@ -73,15 +76,15 @@ let createColorElement = (color) => {
     }
 }
 
-//funcao para proximo nivel do jogo
+//função para proximo nivel do jogo
 let nextLevel = () => {
     score++;
     shuffleOrder();
 }
 
-//funcao para game over
+//função fim do jogo
 let gameOver = () => {
-    alert(`Pontuação: ${score}!\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo`);
+    alert(`Pontuação: ${score}!\nVocê perdeu tudo!!!!!\nClique em OK para iniciar um novo jogo`);
     order = [];
     clickedOrder = [];
 
@@ -90,7 +93,7 @@ let gameOver = () => {
 
 //funcao de inicio do jogo
 let playGame = () => {
-    alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
+    alert('vamo lá eim testa tua memoria ai');
     score = 0;
 
     nextLevel();

@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: rgb(32, 32, 32) ;
+    background-color:#ffefb7;
 }
 
 .main-game {
@@ -16,42 +16,57 @@ body{
     display: grid;
     grid-template-areas: 'verde vermelho' 'amarelo azul';
     grid-gap: 10px;
-    border: 1px solid #ffffff;
-    background-color: #ffffff;
+    background-color: #000000;
     border-radius: 100%;
-    margin-top: 20%;
+    margin-top: 2%;
     width: 700px;
     height: 700px;
+    filter:drop-shadow(8px 8px 10px rgb(59, 59, 59));
 }
 
 .blue {
     grid-area: azul;
-    background-color: blue;
+    background-color: #141414;
     border-bottom-right-radius: 100%;
-
+    background: radial-gradient(circle 1px at -5% 0%, transparent, transparent 120px, blue 100px);
+    background-size: 100% 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+   
 }
 
 .red {
     grid-area: vermelho;
-    background-color: red;
+    background-color: #141414;
     border-top-right-radius: 100%;
-
+    background: radial-gradient(circle 1px at -5% 105%, transparent, transparent 120px, red 100px);
+    background-size: 100% 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
     }
     
     .yellow {
         grid-area: amarelo;
-        background-color: yellow;
-        border-bottom-left-radius: 100% ;
+        background-color: #141414;
+        border-bottom-left-radius: 100%;
+        background: radial-gradient(circle 1px at 105% 0%, transparent, transparent 120px, yellow 100px);
+        background-size: 100% 100%;
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
       
     }
         
         .green {
-            grid-area: verde;
-            background-color: green;
-            border-top-left-radius: 100% ;
-    
+        grid-area: verde;
+        background-color: #141414;
+        border-top-left-radius: 100%;
+        background: radial-gradient(circle 1px at 105% 105%, transparent, transparent 120px, green 100px);
+        background-size: 100% 100%;
+        background-position: 0 0, 100% 0;
+        background-repeat: no-repeat;
+        
         }
             
 .selected {
-    opacity: 0.8;
+    opacity: 0.6;
 }                      
